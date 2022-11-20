@@ -103,7 +103,7 @@ class TcpSocketClient extends TcpSocket {
         writeExecutor.execute(new Runnable() {
             @Override
             public void run() {
-                if(socket!==null){
+                if(socket!=null){
                     try {
                         socket.getOutputStream().write(data);
                         receiverListener.onWritten(getId(), msgId, null);
